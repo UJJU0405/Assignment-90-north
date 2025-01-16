@@ -1,0 +1,318 @@
+1.code for frontend development
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 60px;
+        }
+
+        .left-menu {
+            width: 250px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .left-menu.collapsed {
+            transform: translateX(-100%);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .right-panel {
+            width: 300px;
+            background-color: #f9f9f9;
+            border-left: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .toggle-menu {
+            display: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .left-menu {
+                position: absolute;
+                height: 100%;
+                transform: translateX(-100%);
+            }
+
+            .left-menu.collapsed {
+                transform: translateX(0);
+            }
+
+            .toggle-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Responsive Webpage</h1>
+    </div>
+
+    <div class="container">
+        <div class="left-menu" id="leftMenu">
+            <p><strong>Menu</strong></p>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <button class="toggle-menu" id="toggleButton">Toggle Menu</button>
+
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="right-panel">
+            <h2>Right Panel</h2>
+            <p>This is the right-side panel.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer Content</p>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const leftMenu = document.getElementById('leftMenu');
+
+        toggleButton.addEventListener('click', () => {
+            leftMenu.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
+ 2. With Java script function 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 60px;
+        }
+
+        .left-menu {
+            width: 250px;
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .left-menu.collapsed {
+            transform: translateX(-100%);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .right-panel {
+            width: 300px;
+            background-color: #f9f9f9;
+            border-left: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .toggle-menu {
+            display: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .left-menu {
+                position: absolute;
+                height: 100%;
+                transform: translateX(-100%);
+            }
+
+            .left-menu.collapsed {
+                transform: translateX(0);
+            }
+
+            .toggle-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Responsive Webpage</h1>
+    </div>
+
+    <div class="container">
+        <div class="left-menu" id="leftMenu">
+            <p><strong>Menu</strong></p>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <button class="toggle-menu" id="toggleButton">Toggle Menu</button>
+
+        <div class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="right-panel">
+            <h2>Right Panel</h2>
+            <p>This is the right-side panel.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer Content</p>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const leftMenu = document.getElementById('leftMenu');
+
+        toggleButton.addEventListener('click', () => {
+            leftMenu.classList.toggle('collapsed');
+        });
+
+        function adjustPageScale() {
+            const width = window.innerWidth;
+            const body = document.body;
+
+            if (width > 992 && width <= 1600) {
+                body.style.transform = 'scale(0.9)';
+                body.style.transformOrigin = 'top center';
+            } else if (width >= 700 && width <= 767) {
+                body.style.transform = 'scale(0.8)';
+                body.style.transformOrigin = 'top center';
+            } else if (width >= 600 && width < 700) {
+                body.style.transform = 'scale(0.75)';
+                body.style.transformOrigin = 'top center';
+            } else if (width <= 600) {
+                body.style.transform = 'scale(0.5)';
+                body.style.transformOrigin = 'top center';
+            } else {
+                body.style.transform = 'scale(1)';
+                body.style.transformOrigin = 'top center';
+            }
+        }
+
+        window.addEventListener('resize', adjustPageScale);
+        window.addEventListener('load', adjustPageScale);
+    </script>
+</body>
+</html>
+
+
